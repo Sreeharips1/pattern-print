@@ -1,0 +1,61 @@
+#hollow square
+def pattern(a):
+   for i in range(a):
+       
+       for j in range(a):
+           if(i==0 or i==a-1 or j==0 or j==a-1):
+                 print("*",end=" ")
+           else:
+                print(" ",end=" ")      
+       print()   
+a=4
+pattern(a)
+print("\n")
+#mirror rhombus
+
+def mirrorrhombus(a):    
+    for i in range(a):            
+         print(" "*i+"*"*a)
+mirrorrhombus(4)           
+print("\n")  
+
+#rhombus
+def rhombus(a):
+    for i in range(a):
+        print(" "*(a-1-i)+"*"*a)
+rhombus(a)
+print("\n")  
+
+#diamond
+def diamond(a):
+    #upper
+    for i in range(a):
+        for j in range(a-i-1):
+            print(" ",end="")
+        for j in range(i*2+1):
+            print("*",end="")
+        print()
+    #lower    
+    for i in range(1,a):
+        for j in range(i):
+            print(" ",end="") 
+        for j in range((a-i)*2-1):
+            print("*",end="")
+        print()       
+                
+diamond(a) 
+print("\n")  
+
+#half diamond
+
+def halfstar(a):
+    for i in range(a):
+        for j in range(i+1):
+            print("*",end="")
+        print()
+    for i in range(a):
+        for j in range((a-i-1)):
+            print("*",end="")
+        print()
+halfstar(a) 
+print("\n")    
